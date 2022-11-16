@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "View_Summery",
+    "name": "Data",
     "datasource": {
       "name": "My Drive",
       "pluginId": "google-sheets-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Home",
+    "pageId": "DataSheet",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -28,7 +28,7 @@
         },
         "pagination": {
           "data": {
-            "limit": "",
+            "limit": "{{Table1.pageSize}}",
             "offset": "0"
           }
         },
@@ -36,10 +36,10 @@
           "data": []
         },
         "queryFormat": {
-          "data": "RANGE"
+          "data": "ROWS"
         },
         "range": {
-          "data": "a:g"
+          "data": ""
         },
         "sheetName": {
           "data": "DataSheet"
@@ -53,7 +53,7 @@
         "sortBy": {
           "data": [
             {
-              "column": "",
+              "column": "rowIndex",
               "order": "Ascending"
             }
           ]
@@ -74,17 +74,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.pagination.data.limit"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Table1.pageSize"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home_View_Summery",
+  "id": "DataSheet_Data",
   "deleted": false,
-  "gitSyncId": "6374e955b9cf46780e15b9bd_63750d0ae513ba7181093d36"
+  "gitSyncId": "6374e955b9cf46780e15b9bd_637532601351c74a8ce8d054"
 }

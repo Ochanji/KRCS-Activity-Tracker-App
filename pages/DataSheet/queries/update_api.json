@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "UPDATE_ONE"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -44,7 +44,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\n\t{{Date_Entry.formattedDate}},\n\t{{Region_dropdown.selectedOptionLabel}},\n\t{{County_dropdown.selectedOptionLabel}},\n\t{{SR_dropdown.selectedOptionLabel}},\n\t{{Activity_Entry.selectedOptionLabel}}\n\t{{Beneficiaries.value}}\n\t{{Expenditure.value}}\n}\n:\n{\n\t\n}"
+          "data": "{{\n\t{\n\t\trowIndex: Table1.selectedRow.rowIndex,\n\t\tDate: Date_Entry.formattedDate,\n\t\tRegion: Region_dropdown.selectedOptionLabel,\n\t\tCounty: County_dropdown.selectedOptionLabel,\n\t\tSR_Name: SR_dropdown.selectedOptionLabel,\n\t\tActivity: Activity_Entry.selectedOptionLabel,\n\t\tParticipants: Beneficiaries.value,\n\t\texpenditure: Expenditure.value\n\t\t\n\t}\n}}"
         },
         "sheetName": {
           "data": "DataSheet",
@@ -81,13 +81,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Activity_Entry.selectedOptionLabel",
-      "Beneficiaries.value",
-      "County_dropdown.selectedOptionLabel",
-      "Date_Entry.formattedDate",
-      "Expenditure.value",
-      "Region_dropdown.selectedOptionLabel",
-      "SR_dropdown.selectedOptionLabel"
+      "{\n\t\trowIndex: Table1.selectedRow.rowIndex,\n\t\tDate: Date_Entry.formattedDate,\n\t\tRegion: Region_dropdown.selectedOptionLabel,\n\t\tCounty: County_dropdown.selectedOptionLabel,\n\t\tSR_Name: SR_dropdown.selectedOptionLabel,\n\t\tActivity: Activity_Entry.selectedOptionLabel,\n\t\tParticipants: Beneficiaries.value,\n\t\texpenditure: Expenditure.value\n\t\t\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
