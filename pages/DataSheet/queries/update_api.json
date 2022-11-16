@@ -44,15 +44,19 @@
           "data": ""
         },
         "rowObjects": {
-          "data": ""
+          "data": "{\n\t{{Date_Entry.formattedDate}},\n\t{{Region_dropdown.selectedOptionLabel}},\n\t{{County_dropdown.selectedOptionLabel}},\n\t{{SR_dropdown.selectedOptionLabel}},\n\t{{Activity_Entry.selectedOptionLabel}}\n\t{{Beneficiaries.value}}\n\t{{Expenditure.value}}\n}\n:\n{\n\t\n}"
         },
         "sheetName": {
           "data": "DataSheet",
           "componentData": "DataSheet",
-          "viewType": "json"
+          "viewType": "component",
+          "jsonData": "DataSheet"
         },
         "sheetUrl": {
-          "data": "https://docs.google.com/spreadsheets/d/1xiA7GctvNwrVurv_FLssXSgWE-X2SiAXX42y69iTNE8/edit"
+          "data": "https://docs.google.com/spreadsheets/d/1xiA7GctvNwrVurv_FLssXSgWE-X2SiAXX42y69iTNE8/edit",
+          "componentData": "https://docs.google.com/spreadsheets/d/1xiA7GctvNwrVurv_FLssXSgWE-X2SiAXX42y69iTNE8/edit",
+          "viewType": "component",
+          "jsonData": "https://docs.google.com/spreadsheets/d/1xiA7GctvNwrVurv_FLssXSgWE-X2SiAXX42y69iTNE8/edit"
         },
         "smartSubstitution": {
           "data": true
@@ -68,11 +72,23 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Activity_Entry.selectedOptionLabel",
+      "Beneficiaries.value",
+      "County_dropdown.selectedOptionLabel",
+      "Date_Entry.formattedDate",
+      "Expenditure.value",
+      "Region_dropdown.selectedOptionLabel",
+      "SR_dropdown.selectedOptionLabel"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

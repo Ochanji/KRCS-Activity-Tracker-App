@@ -2,11 +2,11 @@
   "pages": [
     {
       "id": "DataSheet",
-      "isDefault": true
+      "isDefault": false
     },
     {
-      "id": "View",
-      "isDefault": false
+      "id": "Home",
+      "isDefault": true
     }
   ],
   "viewMode": false,
